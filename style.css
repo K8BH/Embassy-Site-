@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root{
+    --bg-base: #f4f4f0;
+    --grid-line: rgba(0,0,0,0,06);
+    --grid-size:24px;
+
+    --text-dark:#121212;
+    --text-muted: #555;
+    --accent-purple: #8c52ff;
+    --accent-green:#7ed957;
+    --terminal-bg:#0a0a0a;
+    --terminal-green: #33ff00;
+
+    --font-mono: 'Courier New', Courier, monospace;
+    --font-pixel: 'Press Start 2P', system-ui, monospace;
+
+}
+
+*{
+    box-sizing: border-box;
+}
