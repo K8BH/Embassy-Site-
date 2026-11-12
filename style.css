@@ -2,7 +2,7 @@
 
 :root{
     --bg-base: #f4f4f0;
-    --grid-line: rgba(0,0,0,0,06);
+    --grid-line: rgba(0,0,0,0.08);
     --grid-size:24px;
 
     --text-dark:#121212;
@@ -19,4 +19,68 @@
 
 *{
     box-sizing: border-box;
+}
+
+body, html{
+    margin:0;
+    padding:0;
+    min-height:  100vh;
+    background-color:var(--bg-base);
+
+
+    background-image:
+    linear-gradient(var(--grid-line) 1px,
+    transparent 1px
+    ),
+    linear-gradient(
+        90deg,
+        var(--grid-line) 1px,
+        transparent 1px
+    );
+
+    background-size:
+    var(--grid-size)
+    var(--grid-size);
+
+    font-family: var(--font-mono);
+    color: var(--text-dark);
+    overflow: hidden;
+}
+
+
+.container{
+    max-width:1200px;
+    margin:0 auto;
+    padding:2rem;
+    position:relative;
+    z-index:2;
+
+
+}
+
+.pixel-text{
+    font-family: var(--font-pixel);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+}
+
+.massive-pixel-text {
+    font-family: var(--font-pixel);
+    font-size: clamp(2.4rem, 8vw, 6.5rem);
+    text-align: center;
+    line-height: 1.1;
+    margin: 4rem 0 2rem 0;
+    text-shadow: 6px 6px 0 rgba(0,0,0,0.1);
+
+}
+
+.massive-header{
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 3rem;
+
+}
+
+.green-mark {
+    color: var(--accent-green);
 }
