@@ -44,7 +44,7 @@ body, html{
 
     font-family: var(--font-mono);
     color: var(--text-dark);
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 
