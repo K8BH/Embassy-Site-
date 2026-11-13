@@ -84,3 +84,56 @@ body, html{
 .green-mark {
     color: var(--accent-green);
 }
+
+.hero{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.headline-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+
+}
+
+.faq-section {
+    margin-top: 8rem;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.faq-grid{
+    display:flex;
+    flex-direction: column;
+    gap:2rem;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+
+}
+
+.faq-item{
+    border-bottom: 3px solid var(--text-dark);
+    padding-bottom: 1.5rem;
+}
+
+.faq-question{
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    align-items: center;
+    font-weight:bolder;
+    list-style: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
