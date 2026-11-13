@@ -137,3 +137,34 @@ body, html{
     cursor: pointer;
     transition: color 0.2s ease;
 }
+
+.faq-question:hover{
+    color: var(--accent-purple);
+
+}
+
+.q-id{
+    color: var(--accent-green);
+    margin-right: 1rem;
+}
+
+.faq-question::after{
+    content: '+';
+    font-family: var(--font-pixel);
+    color: var(--text-dark);
+}
+
+.faq-item[open] .faq-question::after{
+    content: '-';
+    color: var(--accent-purple);
+
+}
+
+.faq-answer{
+    padding-top: 1.5rem;
+    padding-left: 2.7rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    font-weight: bold;
+    
+}
