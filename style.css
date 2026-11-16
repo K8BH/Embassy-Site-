@@ -227,3 +227,75 @@ footer{
     z-index: 10;
 }
 
+.retro-btn {
+    background: transparent;
+    border: 2px solid var(--text-dark);
+    color: var(--text-dark);
+    font-family: var(--font-pixel);
+    font-size: 0.7rem;
+    padding: 0.6rem 1rem;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    text-transform: lowercase;
+
+}
+
+.retro-btn:active {
+    background: var(--text-dark);
+    color: var(--bg-base);
+}
+
+.small-btn {
+    font-size: 0.6rem;
+    margin-top: 0;
+}
+
+.retro-modal{
+    background: var(--bg-base);
+    border: 2px solid var(--text-dark);
+    padding: 1.5rem;
+    width: 300;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: auto;
+
+}
+
+.retro-modal::backdrop {
+    background: rgba(244, 244, 240, 0.85);
+
+}
+
+.modal-img{
+    width: 120px;
+    height: auto;
+    margin: 0 auto 1rem auto;
+    display: block;
+    filter: drop-shadow(2px 2px 0 rgba(0,0,0,0.1));
+
+}
+
+.info-box{
+    min-height: 40px;
+    font-size: 0.7rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+    text-transform: lowercase;
+}
+
+.close-btn{
+    position: absolute;
+    top: 5px;
+    right: 8px;
+    background: transparent;
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--text-dark);
+}
+

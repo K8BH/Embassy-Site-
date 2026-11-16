@@ -6,6 +6,7 @@
     <title>Hack Club Embassy (Fan-Made)</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <script src="script.js" defer></script>
 
 </head>
 <body>
@@ -23,10 +24,12 @@
 
 
                 <div class="input-wrapper">
+                   
                     <input type="email" placeholder="u@example.com" class="retro-input" autocomplete="off" spellcheck="false">
                     <span class="input-indicator">press enter :3</span>
 
                 </div>
+                 <button id="shark-btn" class="retro-btn">inspect mascot</button>
 
 
             </section>
@@ -77,7 +80,7 @@
                         <summary class="faq-question">
                             <span class="q-id">04</span>
                             when does Embassy end?
-                        </summary>
+                        </summary>  
                         <div  class="faq-answer">
                             Embassy ends on 30th November 2025 but theres is a chance of extension if the community submits project value of 1000 hours!!
                         </div>
@@ -93,12 +96,21 @@
             
             
             </section>
+            <dialog id="shark-modal" class="retro-modal">
+                <div class="modal-content">
+                    <button id="close-modal" class="close-btn">x</button>
+                    <img src="shark(blahaj).png" alt="blahaj" class="modal-img">
+                    <div id="shark-info" class="pixel-text info-box"></div>
+                    <button id="next-info-btn" class="retro-btn small-btn">next >></button>  
+                </div>
+            </dialog>
             
         </main>
         <footer>
             <p>This website is built with ❤️ by the K8BH and the ysws is buit by Branav,Cloud,Riitam and dsg </p>
         </footer>
     </div>
+
     
 </body>
 </html>
