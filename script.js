@@ -76,4 +76,16 @@ nextBtn.addEventListener('click', () => {
     }
     infoBox.innerText = currentFacts[currentFactIndex];
 });
-    
+
+const loadingScreen = document.getElementById('loading-screen');
+const skipBtn = document.getElementById('skip-btn');
+
+skipBtn.addEventListener('click', () => {
+    loadingScreen.classList.add('hidden');
+});
+
+
+setTimeout(() => {
+    loadingScreen.classList.add('hidden');
+
+}, 3000);
