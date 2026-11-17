@@ -382,3 +382,16 @@ footer{
 .hidden {
     display: none !important;
 }
+
+.boot-log{
+    font-family: var(--font-pixel);
+    font-size: 1rem;
+    margin-top:35px ;
+    text-align: left;
+    color: #000;
+    text-transform: lowercase;
+
+}
+
+.cursor{
+    animation: blink-text 0.8s step-end infinite}

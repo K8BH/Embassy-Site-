@@ -89,3 +89,32 @@ setTimeout(() => {
     loadingScreen.classList.add('hidden');
 
 }, 3000);
+
+const bootLog = document.getElementById('boot-log');
+const bootMessages = [
+    "> mounting_filesystem...",
+    "> collecting funds from barnav...",
+    ">fullfilling some homelab grants...",
+    ">fullfilling te travel grants...",
+    ">fullfilling passports to hackclubbers..."
+
+];
+
+let msgIndex = 0;
+
+
+const bootInterval = setInterval(() => {
+    if (msgIndex < bootMessages.length) {
+        bootLog.innerText = bootMessages[msgIndex];
+        msgIndex++;
+
+    }else{
+        clearInterval(bootInterval)}
+            
+}, 500);
+
+
+skipBtn.addEventListener('click', () => {
+    loadingScreen.classList.add('hidden');
+    clearInterval(bootInterval);
+});
