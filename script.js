@@ -118,3 +118,29 @@ skipBtn.addEventListener('click', () => {
     loadingScreen.classList.add('hidden');
     clearInterval(bootInterval);
 });
+
+const countdownEl = document.getElementById('countdown');
+const deadline = new Date('December 7, 2026 23:59:59').getTime();
+
+const timeInterval = setInterval(() => {
+    const now = new Date().getTime();
+
+    const distance = deadline - now;
+
+    if (distance < 0) {
+        clearInterval(timeInterval);
+        countdownEl.innerText = "Times Up !";
+        return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 *24 )) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60 )) / (1000 * 60 ));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const d = String(days).padStart(2,'0');
+    const h = String(hours).padStart(2,'0');
+    const m = String(minutes).padStart(2,'0');
+    const s = String(seconds).padStart(2,'0');
+
+    countdownEl.innerText = `${d}:${h}:${m}:${s}`;
+}, 1000);
