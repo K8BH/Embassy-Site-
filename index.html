@@ -29,16 +29,16 @@
                     <span class="input-indicator">press enter :3</span>
 
                 </div>
-                 <button id="shark-btn" class="retro-btn">inspect mascot</button>
+                
 
 
             </section>
 
             <section class="sticker-grid" id="sticker-canvas">
-                <img src="passport.png" alt="passport sticker" class="sticker float-1" style="top: 25%; left: 0.5%;">
-                <img src="YubiKey.png" alt="YubiKey Sticker" class="sticker float-2" style="top: 30%; right: 3%;">
-                <img src="shark(blahaj).png" alt="blahaj Shark Sticker" class="sticker float-3" style="bottom: 20%; left: 2%;">
-                <img src="watch.png" alt="casio watch sticker" class="sticker float-1" style="bottom: 15%; right: 4%;">
+                <img src="passport.png" alt="passport sticker" class="sticker float-1" style="top: 25%; left: 0.5%;" data-item="passport">
+                <img src="YubiKey.png" alt="YubiKey Sticker" class="sticker float-2" style="top: 30%; right: 3%;" data-item="yubikey">
+                <img src="shark(blahaj).png" alt="blahaj Shark Sticker" class="sticker float-3" style="bottom: 20%; left: 2%;" data-item="blahaj">
+                <img src="watch.png" alt="casio watch sticker" class="sticker float-1" style="bottom: 15%; right: 4%;" data-item="watch">
 
             </section>
             <section class ="faq-section">
@@ -96,11 +96,11 @@
             
             
             </section>
-            <dialog id="shark-modal" class="retro-modal">
+            <dialog id="item-modal" class="retro-modal">
                 <div class="modal-content">
                     <button id="close-modal" class="close-btn">x</button>
-                    <img src="shark(blahaj).png" alt="blahaj" class="modal-img">
-                    <div id="shark-info" class="pixel-text info-box"></div>
+                    <img src="" alt="item-preview" id="modal-img" class="modal-img">
+                    <div id="item-info" class="pixel-text info-box"></div>
                     <button id="next-info-btn" class="retro-btn small-btn">next >></button>  
                 </div>
             </dialog>

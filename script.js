@@ -1,22 +1,68 @@
-const sharkBtn = document.getElementById('shark-btn');
-const modal = document.getElementById('shark-modal');
+const modal = document.getElementById('item-modal');
 const closeBtn = document.getElementById('close-modal');
 const nextBtn = document.getElementById('next-info-btn');
-const infoBox = document.getElementById('shark-info');
+const infoBox = document.getElementById('item-info');
+const modalImg = document.getElementById('modal-img');
+const stickers = document.querySelectorAll('.sticker');
 
-const sharkFacts = [
+const itemData = {
+    blahaj: {
+        src: "shark(blahaj).png",
+        facts: [
     "name: blahaj",
     "role: emotional Support",
     "skill: fixes off one b one error :3",
     "status: currently bored"
-];
+]
+},
 
+passport: {
+    src: "passport.png",
+    facts: [
+        "item: hackclub passport",
+        "purpose: collecting stamps",
+        "perk: unlocks Coolness",
+        "status: ready to ship"
+    ]
+},
+yubikey: {
+    src: "YubiKey.png",
+    facts: [
+        "item: yubikey",
+        "type:hardware security ",
+        "skill: keeps the hackers away <3",
+        "status: locked in"
+    ]
+
+},
+
+watch: {
+    src: "watch.png",
+    facts: [
+        "item: casio f-91 (actually a watch grant)",
+        "type: legendary timepiece",
+        "skill: tracks ur time ",
+        "status:ticking"
+    ]
+},
+};
+
+let currentFacts = [];
 let currentFactIndex = 0;
 
-sharkBtn.addEventListener('click', () => {
-    currentFactIndex = 0;
-    infoBox.innerText = sharkFacts[currentFactIndex];
-    modal.showModal();
+stickers.forEach(sticker => {
+    sticker.addEventListener('click', () => {
+        const itemKey = sticker.getAttribute('data-item');
+        const data= itemData[itemKey];
+
+        modalImg.src = data.src;
+        currentFacts = data.facts;
+        currentFactIndex = 0;
+
+        infoBox.innerText = currentFacts[currentFactIndex];
+        modal.showModal();
+    });
+    
 });
 
 closeBtn.addEventListener('click', () => {
@@ -25,8 +71,9 @@ closeBtn.addEventListener('click', () => {
 
 nextBtn.addEventListener('click', () => {
     currentFactIndex++;
-    if (currentFactIndex >= sharkFacts.length) {
+    if (currentFactIndex >= currentFacts.length) {
         currentFactIndex = 0;
     }
-    infoBox.innerText = sharkFacts[currentFactIndex];
+    infoBox.innerText = currentFacts[currentFactIndex];
 });
+    

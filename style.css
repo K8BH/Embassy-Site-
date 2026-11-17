@@ -216,6 +216,8 @@ body, html{
     width: 140px;
     height: auto;
     filter: drop-shadow(3px 3px 0 rgba(0,0,0,0.15));
+    pointer-events: auto;
+    cursor: pointer;
 }
 
 footer{
