@@ -144,3 +144,42 @@ const timeInterval = setInterval(() => {
 
     countdownEl.innerText = `${d}:${h}:${m}:${s}`;
 }, 1000);
+
+let isDragging = false;
+let dragOffsetX, dragOffsetY;
+
+
+modal.addEventListener('mousedown', (e) => {
+    if (e.target.tagName === 'BUTTON    ') return;
+
+    isDragging = true;
+
+    const rect = modal.getBoundingClientRect();
+
+
+    modal.style.left = rect.left + 'px';
+    modal.style.top = rect.top + 'px';
+    modal.style.transform = 'none';
+    modal.style.margin = '0';
+
+    dragOffsetX = e.clientX - rect.left;
+    dragOffsetY = e.clientY - rect.top;
+
+});
+document.addEventListener('mousemove', (e) => {
+    if (!isDragging) return;
+
+    modal.style.left = (e.clientX - dragOffsetX) + 'px';
+    modal.style.top = (e.clientY - dragOffsetY) + 'px';
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+})
+
+closeBtn.addEventListener('click', () => {
+    modal.close();
+    modal.style.left = '50%';
+    modal.style.top = '50%';
+    modal.style.transform = 'translate(-50%, -50%)';
+});

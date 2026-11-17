@@ -201,26 +201,33 @@ body, html{
 }
 
 
-.sticker-grid{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 1;
-}
+  .shop-grid{
+    display: grid;
+    grid-template-columns: repeat(2,1FR);
+    gap: 4rem;
+    max-width: 500px;
+    margin: 4rem auto;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    z-index: 50;
+  }
 
-.sticker{
-    position: absolute;
-    width: 140px;
-    height: auto;
-    filter: drop-shadow(3px 3px 0 rgba(0,0,0,0.15));
-    pointer-events: auto;
-    cursor: pointer;
-}
+    .sticker{
+        position: static;
+    
+        width: 140px;
+        height: auto;
+        filter: drop-shadow(6px 6px 0px #000);
+        cursor: pointer;
+    }
 
-footer{
+    .sticker:active {
+        transform: translate(-4px,4px);
+        filter: drop-shadow(2px 2px 0px #000);
+    }
+
+    footer{
     margin-top: 6rem;
     padding-bottom: 2rem;
     font-weight: 600;
@@ -263,7 +270,13 @@ footer{
     left: 50%;
     transform: translate(-50%, -50%);
     margin: auto;
+    cursor: grab;
 
+}
+
+
+.retro-modal:active{
+    cursor: grabbing;
 }
 
 .retro-modal::backdrop {
@@ -419,3 +432,11 @@ footer{
     color: var(--text-dark);
     letter-spacing: 2px;
 }
+
+.shop-title {
+    font-size: 1.5rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
