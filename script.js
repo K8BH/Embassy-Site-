@@ -183,3 +183,18 @@ closeBtn.addEventListener('click', () => {
     modal.style.top = '50%';
     modal.style.transform = 'translate(-50%, -50%)';
 });
+
+
+
+const hoursInput = document.getElementById('hours-input');
+const calcBtn = document.getElementById('calc-btn');
+const stampOutput = document.getElementById('stamp-output');
+
+calcBtn.addEventListener('click', () => {
+    const hours = parseInt(hoursInput.value) || 0;
+
+    const totalStamps = hours * 10;
+
+    stampOutput.innerText = totalStamps;
+});
+ 
