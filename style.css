@@ -237,6 +237,23 @@ body, html{
         height: auto;
         filter: drop-shadow(6px 6px 0px #000);
         cursor: pointer;
+        transition: none;
+    }
+
+    .sticker .float-1{
+        transform: rotate(-4deg);
+    }
+
+    .sticker .float-2 {
+        transform: rotate(3.5deg);
+    }
+    .sticker .float-3 {
+        transform: rotate(-2deg);
+    }
+
+    .sticker:hover {
+        transform: rotate(0deg) scale(1.06);
+        filter: drop-shadow(4px 4px 0px #000);
     }
 
     .sticker:active {
