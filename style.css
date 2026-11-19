@@ -151,7 +151,7 @@ body, html{
     font-weight:bolder;
     list-style: none;
     cursor: pointer;
-    transition: color 0.2s ease;
+   
 }
 
 .faq-question:hover{
@@ -220,11 +220,11 @@ body, html{
 
   .shop-grid{
     display: grid;
-    grid-template-columns: repeat(2,1FR);
-    gap: 4rem;
+    grid-template-columns: repeat(2,140px);
+    gap: 4rem 6rem;
     max-width: 500px;
-    margin: 4rem auto;
-    justify-content: center;
+    margin: 2rem 0 6rem 0;
+    justify-content: flex-start;
     align-items: center;
     position:relative;
     z-index: 50;
@@ -280,7 +280,7 @@ body, html{
     background: var(--bg-base);
     border: 2px solid var(--text-dark);
     padding: 1.5rem;
-    width: 300;
+    width: 300px;
     text-align: center;
     position: fixed;
     top: 50%;
@@ -456,13 +456,15 @@ body, html{
     margin-bottom: 2rem;
     text-transform: uppercase;
     line-height: 1.8;
+    text-align: left;
+    width: 100%;
 }
 
 .calculator-section {
     width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     margin: 6rem 0 4rem 0;
     position: relative;
     z-index: 10;
@@ -474,11 +476,11 @@ body, html{
     width: 100%;
     max-width: 420px;
     box-shadow: 8px 8px 0px var(--text-dark) ;
-    text-align: center;
+    text-align: left;
     display: flex;
     flex-direction: column;
     gap: 1.8rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .strict-input{
