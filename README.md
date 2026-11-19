@@ -1,7 +1,7 @@
 # Hackclub-Embassy-Site-Fan-made 
 A Fan made websitr for the hackclub Embassy YSWS, built with retro pixel and grid paper asthetic using plain Html,CSS and JavaScript.
 
-> Note- The E-mail filling form does not work also it should not work. The website might have bugs
+> Note- The E-mail filling form does not work also it should not work. The website might have bugs and the timer only counts till 7th december 11:59 soo its limited and on a purpose.
 
 ## Features (the are prob good)
 
